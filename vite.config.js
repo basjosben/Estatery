@@ -9,7 +9,7 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
-  root: 'app/javascript/src',
+  root: 'src',
   clearScreen: false,
   plugins: [react()],
   babel: {
