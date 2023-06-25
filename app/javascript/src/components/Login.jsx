@@ -15,6 +15,8 @@ import {
 import { LockOutlined } from "@mui/icons-material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useLocation } from "react-router-dom";
+import { GoogleAuth } from "./googleAuth";
+import { setToLocalStorage} from "hooks/useLocalStorage";
 
 
 
@@ -34,8 +36,8 @@ const Login = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    // const data = new FormData(event.currentTarget);
-    // setToLocalStorage("isLoggedIn", true);
+    const data = new FormData(event.currentTarget);
+    setToLocalStorage("isLoggedIn", true);
     const { state = {} } = location;
     let redirectPath = state?.from || "/";
 
@@ -133,6 +135,7 @@ const Login = () => {
                   </Link>
                 </Grid>
               </Grid>
+              <GoogleAuth redirectPath="/" />
               <Copyright sx={{ mt: 5 }} />
             </Box>
           </Box>

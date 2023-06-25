@@ -7,6 +7,7 @@ import RoofingIcon from "@mui/icons-material/Roofing";
 import { useNavigate } from "react-router-dom";
 import Searchbar from "../components/Searchbar";
 import { createQueryString } from "../utils";
+import TileGrid from "../components/TileGrid";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -51,7 +52,7 @@ const Homepage = () => {
                 <span className="text-indigo-500">Featured</span> Properties
               </Typography>
               <Box mt={4}>
-                {/* <TileGrid /> */}
+                <TileGrid />
               </Box>
             </Box>
           </Grid>

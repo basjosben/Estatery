@@ -6,7 +6,7 @@ import Login from "./Login";
 import Signup from "./Signup";
 // import AdminPanel from "../pages/AdminPanel";
 import Home from "../pages/Home";
-// import ListingPage from "../pages/ListingPage";
+import ListingPage from "../pages/ListingPage";
 import Navbar from "./Navbar";
 
 const Main = () => {
@@ -22,14 +22,14 @@ const Main = () => {
               <Route element={<Login />} path="/login" />
               <Route element={<Signup />} path="/signup" />
               {/* <Route element={<AdminPanel />} path="/admin" /> */}
-              {/* {isLoggedIn ? (
+              {isLoggedIn ? (
                 <Route element={<ListingPage />} path="/listing" />
               ) : (
                 <Route
                   element={<LoginRedirect from="/listing" />}
                   path="/listing"
                 />
-              )} */}
+              )}
               <Route element={<Home />} path="/" />
             </Routes>
           </BrowserRouter>
